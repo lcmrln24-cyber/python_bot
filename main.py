@@ -2,8 +2,10 @@ import telebot
 import requests
 
 # ===== CONFIGURATION =====
-TELEGRAM_TOKEN = "8142327766:AAG12dXLR6pVyDMfmpC-fqG_PGaPkZduFMQ"
-MAMOUTH_API_KEY = "sk-NnD24as0B6iEMchgGHpEIg"
+import os
+
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+MAMOUTH_API_KEY = os.environ.get("MAMOUTH_API_KEY")
 MAMOUTH_API_URL = "https://api.mammouth.ai/v1/chat/completions"
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
